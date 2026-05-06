@@ -17,40 +17,19 @@
     --text-main:  #1a2a3d;
     --text-muted: #5a7090;
     --text-light: #8ca0b8;
-
-    --singles-bg:  #EBF3FD;
-    --singles-border: #B5D4F4;
-    --singles-text:   #185FA5;
-    --singles-bar:    #378ADD;
-
-    --doubles-bg:  #FFF8EE;
-    --doubles-border: #FAC775;
-    --doubles-text:   #854F0B;
-    --doubles-bar:    #EF9F27;
-
-    --triples-bg:  #ECFDF5;
-    --triples-border: #9FE1CB;
-    --triples-text:   #0F6E56;
-    --triples-bar:    #1D9E75;
-
-    --hr-bg:     #FFFBEB;
-    --hr-border: #FDE68A;
-    --hr-text:   #92600A;
-    --hr-bar:    #c9a84c;
+    --singles-bg:  #EBF3FD; --singles-border: #B5D4F4; --singles-text: #185FA5; --singles-bar: #378ADD;
+    --doubles-bg:  #FFF8EE; --doubles-border: #FAC775; --doubles-text: #854F0B; --doubles-bar: #EF9F27;
+    --triples-bg:  #ECFDF5; --triples-border: #9FE1CB; --triples-text: #0F6E56; --triples-bar: #1D9E75;
+    --hr-bg:     #FFFBEB; --hr-border: #FDE68A; --hr-text: #92600A; --hr-bar: #c9a84c;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text-main); min-height: 100vh; }
-
-  /* HEADER */
   header { background: var(--navy); padding: 20px 16px 16px; border-bottom: 3px solid var(--navy-dark); }
   .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; }
   .logo { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 1px; }
   .logo span { color: rgba(255,255,255,0.65); }
   .date-badge { background: #ffffff; color: var(--navy); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
   .header-sub { margin-top: 6px; font-size: 12px; color: rgba(255,255,255,0.55); }
-
-  /* STATS BAR */
   .stats-bar { display: flex; gap: 10px; padding: 12px 16px; background: var(--surface); overflow-x: auto; border-bottom: 1px solid var(--border); }
   .stat { border-radius: 8px; padding: 10px 14px; min-width: 90px; text-align: center; flex-shrink: 0; border: 1px solid var(--navy-mid); background: var(--navy-light); }
   .stat-val { font-size: 20px; font-weight: 800; }
@@ -65,51 +44,6 @@
   .stat.homeruns .stat-val { color: var(--hr-bar); }
   .stat.urgent-stat { background: #fef2f2; border-color: #fecaca; }
   .stat.urgent-stat .stat-val { color: #dc2626; }
-
-  /* PIPELINE PROGRESS BAR */
-  .pipeline-progress { display: grid; grid-template-columns: repeat(4, 1fr); margin: 12px 16px 4px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
-  .pipe-stage { padding: 12px 10px; text-align: center; border-right: 1px solid var(--border); }
-  .pipe-stage:last-child { border-right: none; }
-  .pipe-stage.s1 { background: var(--singles-bg); }
-  .pipe-stage.s2 { background: var(--doubles-bg); }
-  .pipe-stage.s3 { background: var(--triples-bg); }
-  .pipe-stage.s4 { background: var(--hr-bg); }
-  .pipe-abbr { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-  .pipe-abbr.s1 { color: var(--singles-text); }
-  .pipe-abbr.s2 { color: var(--doubles-text); }
-  .pi 2px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .stat.singles { background: var(--singles-bg); border-color: var(--singles-border); }
-  .stat.singles .stat-val { color: var(--singles-text); }
-  .stat.doubles { background: var(--doubles-bg); border-color: var(--doubles-border); }
-  .stat.doubles .stat-val { color: var(--doubles-text); }
-  .stat.triples { background: var(--triples-bg); border-color: var(--triples-border); }
-  .stat.triples .stat-val { color: var(--triples-text); }
-  .stat.homeruns { background: var(--hr-bg); border-color: var(--hr-border); }
-  .stat.homeruns .stat-val { color: var(--hr-bar); }
-  .stat.urgent-stat { background: #fef2f2; border-color: #fecaca; }
-  .stat.urgent-stat .stat-val { color: #dc2626; }
-
-  /* PIPELINE PROGRESS BAR */
-  .pipeline-progress { display: grid; grid-template-columns: repeat(4, 1fr); margin: 12px 16px 4px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
-  .pipe-stage { padding: 12px 10px; text-align: center; border-right: 1px solid var(--border); }
-  .pipe-stage:last-child { border-right: none; }
-  .pipe-stage.s1 { background: var(--singles-bg); }
-  .pipe-stage.s2 { background: var(--doubles-bg); }
-  .pipe-stage.s3 { background: var(--triples-bg); }
-  .pipe-stage.s4 { background: var(--hr-bg); }
-  .pipe-abbr { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-  .pipe-abbr.s1 { color: var(--singles-text); }
-  .pipe-abbr.s2 { color: var(--doubles-text); }
-  .pipe-abbr.s3 { color: var(--triples-text); }
-  .pipe-abbr.s4 { color: var(--hr-text); }
-  .pipe-num { font-size: 24px; font-weight: 800; line-height: 1.2; margin-top: 2px; }
-  .pipe-num.s1 { color: var(--singles-text); }
-  .pipe-num.s2 { color: var(--doubles-text); }
-  .pipe-num.s3 { color: var(--triples-text); }
-  .pipe-num.s4 { color: var(--hr-bar); }
-  .pipe-sub { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
-
-  /* TAB BAR */
   .tab-bar { display: flex; gap: 0; background: var(--surface); border-bottom: 1px solid var(--border); overflow-x: auto; }
   .tab { padding: 12px 16px; font-size: 12px; font-weight: 600; color: var(--text-muted); cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; }
   .tab.active { color: var(--navy); border-bottom-color: var(--navy); }
@@ -117,11 +51,8 @@
   .tab.tab-urgent { color: #b91c1c; }
   .tab.tab-urgent.active { color: #b91c1c; border-bottom-color: #ef4444; }
   .tab.tab-urgent:hover { background: #fef2f2; }
-
   .tab-content { display: none; }
   .tab-content.active { display: block; }
-
-  /* SECTION & GROUP LABELS */
   .section { padding: 0 16px 16px; }
   .group-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; margin: 14px 0 8px; padding: 6px 10px; border-radius: 6px; }
   .group-label.g-singles  { background: var(--singles-bg);  color: var(--singles-text);  border: 1px solid var(--singles-border); }
@@ -129,9 +60,6 @@
   .group-label.g-triples  { background: var(--triples-bg);  color: var(--triples-text);  border: 1px solid var(--triples-border); }
   .group-label.g-homeruns { background: var(--hr-bg);       color: var(--hr-text);       border: 1px solid var(--hr-border); }
   .group-label.g-cold     { background: #f1f5f9; color: var(--text-muted); border: 1px solid var(--border); }
-  .group-label.g-urgent   { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
-
-  /* DEAL CARDS */
   .deal-card { background: var(--surface); border-radius: 10px; padding: 14px; margin-bottom: 10px; border-left: 4px solid var(--border); box-shadow: 0 1px 4px rgba(27,58,107,0.07); }
   .deal-card.c-singles  { border-left-color: var(--singles-bar); }
   .deal-card.c-doubles  { border-left-color: var(--doubles-bar); }
@@ -139,92 +67,55 @@
   .deal-card.c-homeruns { border-left-color: var(--hr-bar); }
   .deal-card.c-urgent   { border-left-color: #ef4444; }
   .deal-card.c-cold     { border-left-color: #94a3b8; }
-
   .deal-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
   .deal-name  { font-size: 15px; font-weight: 700; color: var(--text-main); line-height: 1.2; }
   .deal-value { font-size: 14px; font-weight: 800; color: var(--navy); white-space: nowrap; }
-
   .deal-status { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
   .ds-contract  { background: #dcfce7; color: #166534; }
   .ds-psa       { background: #dbeafe; color: #1e40af; }
   .ds-loi       { background: #ede9fe; color: #5b21b6; }
   .ds-listing   { background: #ccfbf1; color: #0f766e; }
-  .ds-pursuit   { background: #f3e8ff; color: #6d28d9; }
   .ds-blocked   { background: #ffedd5; color: #9a3412; }
-  .ds-premarket { background: #e0f2fe; color: #075985; }
-  .ds-active    { background: #ccfbf1; color: #0f766e; }
-  .ds-new       { background: var(--singles-bg); color: var(--singles-text); }
-  .ds-singles   { background: var(--singles-bg); color: var(--singles-text); }
-  .ds-doubles   { background: var(--doubles-bg); color: var(--doubles-text); }
-  .ds-triples   { background: var(--triples-bg); color: var(--triples-text); }
-  .ds-homeruns  { background: var(--hr-bg); color: var(--hr-text); }
-  .ds-cold      { background: #f1f5f9; color: #475569; }
   .ds-alert     { background: #fee2e2; color: #991b1b; }
-
+  .ds-active    { background: #ccfbf1; color: #0f766e; }
+  .ds-cold      { background: #f1f5f9; color: #475569; }
+  .ds-new       { background: var(--singles-bg); color: var(--singles-text); }
   .deal-meta { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
   .mp  { font-size: 11px; background: var(--navy-light); color: var(--navy); padding: 3px 8px; border-radius: 20px; }
   .mp.alert   { background: #fee2e2; color: #991b1b; }
   .mp.success { background: #dcfce7; color: #166534; }
   .mp.warn    { background: #ffedd5; color: #9a3412; }
   .mp.info    { background: #e0f2fe; color: #075985; }
-
   .deal-action { margin-top: 8px; font-size: 12px; color: var(--text-muted); line-height: 1.4; }
   .deal-action strong { color: var(--navy); }
-
-  /* URGENT BANNER */
   .urgent-banner { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #ef4444; margin: 12px 16px; border-radius: 8px; padding: 12px; }
   .urgent-banner h3 { color: #991b1b; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-  .urgent-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; font-size: 13px; color: #7f1d1d; }
+  .urgent-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; font-size: 13px; color: #7f1d1d; line-height: 1.4; }
   .urgent-item:last-child { margin-bottom: 0; }
   .urgent-dot { width: 8px; height: 8px; background: #ef4444; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
-
-  /* CALENDAR */
-  .cal-item { background: var(--surface); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(27,58,107,0.05); }
+  .cal-item { background: var(--surface); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--border); }
   .cal-item.conflict { border-left: 3px solid #ef4444; }
-  .cal-item.newitem  { border-left: 3px solid #0891b2; }
+  .cal-item.highlight { border-left: 3px solid #c9a84c; background: #fffbeb; }
   .cal-date { text-align: center; min-width: 40px; }
   .cal-day { font-size: 18px; font-weight: 800; color: var(--navy); line-height: 1; }
   .cal-dow { font-size: 9px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
   .cal-content { flex: 1; }
   .cal-title  { font-size: 13px; font-weight: 600; color: var(--text-main); }
   .cal-detail { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-  .cal-flag   { font-size: 10px; font-weight: 700; background: var(--navy-light); color: var(--navy); padding: 1px 6px; border-radius: 10px; margin-left: 6px; }
-
-  /* EMAIL */
-  .email-item { background: var(--surface); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid var(--border); box-shadow: 0 1px 3px rgba(27,58,107,0.05); }
-  .email-item.e-unread { border-left-color: var(--navy); }
+  .email-item { background: var(--surface); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid var(--border); }
   .email-item.e-hot    { border-left-color: #ef4444; }
-  .email-item.e-cyan   { border-left-color: #0891b2; }
+  .email-item.e-blue   { border-left-color: var(--navy); }
+  .email-item.e-gold   { border-left-color: #c9a84c; background: #fffbeb; }
+  .email-item.e-green  { border-left-color: #1D9E75; background: #ECFDF5; }
   .email-subject { font-size: 13px; font-weight: 600; color: var(--text-main); }
   .email-meta    { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
   .email-snippet { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
-
-  /* NUDGE */
   .nudge-box { background: var(--navy); border-radius: 10px; padding: 16px; margin: 16px; }
   .nudge-box h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); margin-bottom: 8px; }
-  .nudge-box p  { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.6; }
+  .nudge-box p  { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.6; margin-bottom: 10px; }
+  .nudge-box p:last-child { margin-bottom: 0; }
   .nudge-box p strong { color: #ffffff; }
-
-  /* FOOTER */
   .footer { text-align: center; padding: 16px; font-size: 11px; color: var(--text-light); border-top: 1px solid var(--border); background: var(--surface); }
-</style>
-
-<style>
-#pin-overlay {
-  position:fixed;top:0;left:0;width:100%;height:100%;
-  background:#1B3A6B;z-index:99999;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-}
-#pin-overlay .logo {font-size:26px;font-weight:800;color:#fff;letter-spacing:2px;margin-bottom:6px;}
-#pin-overlay .sub {font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:32px;letter-spacing:1px;}
-#pin-overlay .pin-dots {display:flex;gap:12px;margin-bottom:24px;}
-#pin-overlay .dot {width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.2);border:2px solid rgba(255,255,255,0.4);transition:background 0.15s;}
-#pin-overlay .dot.filled {background:#c9a84c;border-color:#c9a84c;}
-#pin-overlay .keypad {display:grid;grid-template-columns:repeat(3,72px);gap:10px;}
-#pin-overlay .key {height:56px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;color:#fff;font-size:20px;font-weight:600;cursor:pointer;transition:background 0.1s;}
-#pin-overlay .key:active {background:rgba(201,168,76,0.4);}
-#pin-overlay .key.del {font-size:16px;}
-#pin-overlay .error {color:#ef4444;font-size:12px;margin-top:8px;height:16px;}
 </style>
 </head>
 <body>
@@ -232,7 +123,7 @@
 <header>
   <div class="header-top">
     <div class="logo">THE CHERRY <span>GROUP</span></div>
-    <div class="date-badge">Fri, May 1, 2026 · Updated PM CT</div>
+    <div class="date-badge">Wed, May 6, 2026 · Updated AM CT</div>
   </div>
   <div class="header-sub">Commercial Real Estate · St. Louis Metro · Manor Real Estate</div>
 </header>
@@ -240,644 +131,500 @@
 <div class="stats-bar">
   <div class="stat singles"><div class="stat-val">8</div><div class="stat-label">1B Singles</div></div>
   <div class="stat doubles"><div class="stat-val">12</div><div class="stat-label">2B Doubles</div></div>
-  <div class="stat triples"><div class="stat-val">8</div><div class="stat-label">3B Triples</div></div>
+  <div class="stat triples"><div class="stat-val">9</div><div class="stat-label">3B Triples</div></div>
   <div class="stat homeruns"><div class="stat-val">0</div><div class="stat-label">HR Homeruns</div></div>
-  <div class="stat urgent-stat"><div class="stat-val">4</div><div class="stat-label">Urgent</div></div>
+  <div class="stat urgent-stat"><div class="stat-val">5</div><div class="stat-label">Urgent</div></div>
 </div>
 
 <div class="tab-bar">
   <div class="tab active" onclick="showTab('pipeline',this)">Pipeline</div>
-  <div class="tab tab-urgent" onclick="showTab('urgent',this)">⚠ Urgent</div>
+  <div class="tab tab-urgent" onclick="showTab('urgent',this)">&#9888; Urgent</div>
   <div class="tab" onclick="showTab('calendar',this)">Calendar</div>
   <div class="tab" onclick="showTab('email',this)">Email</div>
   <div class="tab" onclick="showTab('nudge',this)">Nudge</div>
 </div>
 
-<!-- ══════════════════════════════════════════ -->
-<!--  PIPELINE TAB                             -->
-<!-- ══════════════════════════════════════════ -->
+<!-- PIPELINE TAB -->
 <div id="pipeline" class="tab-content active">
+<div class="section">
 
-  <div class="section">
+  <div class="group-label g-triples">3B Triples — Active Negotiations &amp; Under Contract</div>
 
-    <!-- ── 3B TRIPLES ── -->
-    <div class="group-label g-triples">3B · Triples — Active Negotiations &amp; Under Contract</div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">8523 Watson Rd</div><div><span class="deal-status ds-psa">Reviving — New Terms Proposed</span></div></div>
-        <div class="deal-value">$525K</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp success">Showing: Fri 5/1 11 AM w/ Daniel (Twin Valley)</span>
-        <span class="mp warn">Conflicts w/ AHM Call 11 AM</span>
-      </div>
-      <div class="deal-action">Showing held 5/1. Attempting to revive with new terms. Ball in Adam's court on go/no-go. Monitor — report back.</div>
+  <div class="deal-card c-triples" style="border-left-color:#ef4444;">
+    <div class="deal-header">
+      <div><div class="deal-name">Harrisburg Portfolio / Shawnee Square</div><div><span class="deal-status ds-alert">LEGAL CALL TODAY 12:30 PM</span></div></div>
+      <div class="deal-value">$2.1M</div>
     </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">Gutermuth Assemblage</div><div><span class="deal-status ds-psa">Awaiting Seller — Near Strike Price</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta"><span class="mp">Caleb Anthonis + Steve Valentine</span><span class="mp">Offer received 4/27 AM</span></div>
-      <div class="deal-action">Offer at $5.50 PSF with Seller. Getting closer to strike price per Eddie 5/1. Awaiting Seller response.</div>
+    <div class="deal-meta">
+      <span class="mp alert">Ollie's EDA Filed Apr 30</span>
+      <span class="mp success">Amanda + Julie (AO Law) — Engaged 5/5</span>
+      <span class="mp success">TIF in Motion — Lenny Engaged</span>
+      <span class="mp">Jake Klamen + Weissman Corp</span>
     </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">3601 Jeffco Blvd (Wesley Rogers)</div><div><span class="deal-status ds-psa">Counter at $2,725,000 · 8.58 CAP</span></div></div>
-        <div class="deal-value">$2.725M</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp success">Countered 4/27 — Getting Closer</span>
-        <span class="mp">Jason Morgan (CCR) — Awaiting Response</span>
-      </div>
-      <div class="deal-action"><strong>Countered at $2,725,000 / 8.58 CAP</strong> on 4/27. Getting closer. Awaiting Jason Morgan's (CCR) response. Keep the pressure on.</div>
-    </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">Arrowhead Point (Harrisburg, IL)</div><div><span class="deal-status ds-contract">Under Contract — Progressing Smoothly</span></div></div>
-        <div class="deal-value">$500K</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp success">✅ PSA Signed + Progressing Smoothly</span>
-        <span class="mp success">✅ Lenny Linsker — Positive Response 5/1</span>
-        <span class="mp">Downstream to Weissman Corp on track</span>
-      </div>
-      <div class="deal-action">Under contract and progressing smoothly per Eddie 5/1. Lenny responded positively. Downstream sale to Weissman Corp on track.</div>
-    </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">295 N. Lindbergh</div><div><span class="deal-status ds-contract">Under Contract</span></div></div>
-        <div class="deal-value">$2.2M</div>
-      </div>
-      <div class="deal-meta"><span class="mp">DD: 5/11</span><span class="mp">Close: 6/10</span><span class="mp">Co-broker: Ben</span></div>
-      <div class="deal-action">17 days to due diligence. Confirm title and escrow are moving with Ben. No surprises on this one.</div>
-    </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">6733 Olive Blvd</div><div><span class="deal-status ds-contract">Under Contract — Extension Likely</span></div></div>
-        <div class="deal-value">$770K</div>
-      </div>
-      <div class="deal-meta"><span class="mp">DD: 5/20</span><span class="mp warn">Close: Extension Likely</span><span class="mp warn">Phase 2 Timeline</span></div>
-      <div class="deal-action">Phase 2 environmental timeline will push close past 6/4. Confirm extension terms — don't let it die on a technicality.</div>
-    </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">700 S Broadway</div><div><span class="deal-status ds-contract">Under Contract</span></div></div>
-        <div class="deal-value">$625K</div>
-      </div>
-      <div class="deal-meta"><span class="mp">DD: 6/11</span><span class="mp">Close: 6/26</span><span class="mp">Co-broker: Ben</span></div>
-      <div class="deal-action">62 days to close. On track. Monitor with Ben.</div>
-    </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">11329 Lackland Rd</div><div><span class="deal-status ds-contract">Under Contract</span></div></div>
-        <div class="deal-value">$325K</div>
-      </div>
-      <div class="deal-meta"><span class="mp">DD: 6/9</span><span class="mp">Close: 7/9</span><span class="mp warn">Backup Offer Decision Pending</span></div>
-      <div class="deal-action">Caleb recommends accepting Patel backup. Make the call and tell Caleb. Co-broker: Caleb.</div>
-    </div>
-
-    <!-- ── 2B DOUBLES ── -->
-    <div class="group-label g-doubles">2B · Doubles — Active Listings (Signed Representation)</div>
-
-    <div class="deal-card c-doubles c-urgent" style="border-left-color: #ef4444;">
-      <div class="deal-header">
-        <div><div class="deal-name">Jeff Lage Portfolio — St. Charles</div><div><span class="deal-status ds-alert">Listing Agreement Unsigned</span></div></div>
-        <div class="deal-value">$17–18M</div>
-      </div>
-      <div class="deal-meta"><span class="mp warn">Fusz Meeting Occurred 4/24</span><span class="mp warn">Outcome Unknown</span></div>
-      <div class="deal-action"><strong>8 Plaza Way, St. Charles.</strong> Meeting happened. What was the outcome? This doesn't advance to Double until the listing agreement is signed. Follow up with Paul Fusz.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Tenholder Plaza</div><div><span class="deal-status ds-listing">Active Listing — New Prospect</span></div></div>
-        <div class="deal-value">$9.21M</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp success">🔥 Greg Berg Underwriting This Weekend — Ideal Buyer</span>
-        <span class="mp success">✅ Joi at McKelvey CA Signed + OM Sent 4/29</span>
-      </div>
-      <div class="deal-action"><strong>Greg Berg is underwriting Tenholder Plaza this weekend</strong> — call him Monday. McKelvey (Joi) CA + OM active. EvGO counterproposal still needs to go to Jake Klamen + attorney.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">CVS Olivette</div><div><span class="deal-status ds-listing">Repriced — Going Live Fri 5/1</span></div></div>
-        <div class="deal-value">$5.5M</div>
-      </div>
-      <div class="deal-meta"><span class="mp success">✅ OM Updated 4/27</span><span class="mp warn">Pre-Call Buyers Before Launch</span></div>
-      <div class="deal-action"><strong>Price reduced to $5,500,000</strong> (from $5.9M) — approved 4/27, updated OM ready. Going live Friday 5/1. Call your top 3–5 net-lease buyers TODAY and tell them it's coming. Don't wait for inbound.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Harrisburg Portfolio / Shawnee Square</div><div><span class="deal-status ds-listing">Active — Multiple Buyers</span></div></div>
-        <div class="deal-value">$2.1M</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp success">Dhaval Patel CA</span>
-        <span class="mp success">Lenny Linsker</span>
-        <span class="mp success">Michael Sintzel (AHRA)</span>
-        <span class="mp warn">TIF — Sam Pending</span>
-      </div>
-      <div class="deal-action">Strong buyer momentum. Brief Sam before Mon 12:30 PM Harrisburg TIF block. Push for Patel tour.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Granite City Portfolio</div><div><span class="deal-status ds-active">3 CAs + Eisenberg Buyer Interest</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp success">Zenkevicius</span>
-        <span class="mp success">Dhaval Patel</span>
-        <span class="mp success">Darshan Dhillon</span>
-      </div>
-      <div class="deal-action">3 CAs executed. <strong>Jeff Eisenberg now has an interested client</strong> (4/27) — loop him in and create urgency with all four parties. More competition = better outcome.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Prospect Yards</div><div><span class="deal-status ds-listing">Active Listing</span></div></div>
-        <div class="deal-value">$2.75M</div>
-      </div>
-      <div class="deal-meta"><span class="mp success">✅ Live on All Sites as of 4/24 8 PM</span></div>
-      <div class="deal-action">2-acre divisible parcel. Louise confirmed live. CoStar updating land size. Drive buyer outreach this week.</div>
-    </div>
-
-    <div class="deal-card c-doubles" style="border-left-color: #ef4444;">
-      <div class="deal-header">
-        <div><div class="deal-name">American Freight / Fairview Heights — Impact Gaming Center</div><div><span class="deal-status ds-psa">Nearly Agreed — PSA + Lease Next Week</span></div></div>
-        <div class="deal-value">$3.5M</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp success">✅ Nearly Fully Agreed</span>
-        <span class="mp">Spaces 6 &amp; 7 · 10-Yr Lease · 2×5-Yr Options</span>
-      </div>
-      <div class="deal-action">Nearly fully agreed per Eddie 5/1. PSA + Lease expected next week. Confirm timeline with Adam.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Jenks Primary Parcel</div><div><span class="deal-status ds-blocked">Blocked — Fill Issue</span></div></div>
-        <div class="deal-value">$4.1M</div>
-      </div>
-      <div class="deal-meta"><span class="mp warn">Linked to South Parcel</span><span class="mp">TSG + NGL + Paine Call Occurred 4/24</span></div>
-      <div class="deal-action">Getting closer per Eddie 5/1. Fill issue being resolved. Keep pushing.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Jenks Neighboring Parcel</div><div><span class="deal-status ds-loi">LOI</span></div></div>
-        <div class="deal-value">$3.5M</div>
-      </div>
-      <div class="deal-meta"><span class="mp warn">Fill Issue</span><span class="mp">$7.6M Combined w/ Primary</span></div>
-      <div class="deal-action">Resolving fill issue unlocks the combined $7.6M. Moves to Triple when fill is resolved and LOI converts.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Wentzville Site</div><div><span class="deal-status ds-premarket">Awaiting Offer</span></div></div>
-        <div class="deal-value">$3–4M</div>
-      </div>
-      <div class="deal-meta"><span class="mp">BJC + Crunch Fitness Looking</span><span class="mp warn">Reschedule Tue 1 PM Call — Enterprise Bank Conflict</span></div>
-      <div class="deal-action">Moving slowly but big profit for Seller. BJC AND Crunch Fitness both looking. Stay close.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">7530 Maryland — Clayton</div><div><span class="deal-status ds-blocked">Price Reduction Pending</span></div></div>
-        <div class="deal-value">$1.15M</div>
-      </div>
-      <div class="deal-meta"><span class="mp warn">Schneider Stalled All Week</span></div>
-      <div class="deal-action">No movement from Schneider. Call Monday or move to the next buyer. Silence is a slow death.</div>
-    </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Wildhorse Fitness</div><div><span class="deal-status ds-psa">✅ PSA Out For Signature</span></div></div>
-        <div class="deal-value">$1.625M</div>
-      </div>
-      <div class="deal-meta"><span class="mp success">PSA Out for Signature — 5/1</span><span class="mp info">Crexi Lead: Michelle Moshiri</span></div>
-      <div class="deal-action"><strong>PSA is out for signature as of 5/1.</strong> Monitor for execution — this moves to Triple the moment both parties sign.</div>
-    </div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">Kink Salon</div><div><span class="deal-status ds-loi">LOI Final Form</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp warn">Pending: Tenant Financials → Landlord Approval</span>
-        <span class="mp warn">Pending: Lender Approval</span>
-      </div>
-      <div class="deal-action"><strong>NEW DEAL — LOI in final form as of 5/1.</strong> Two conditions remaining: (1) Landlord approves tenant financials, (2) Lender approval. Both need to clear before PSA. Monitor both tracks.</div>
-    </div>
-
-    <!-- ── 2B DOUBLES — NEW ── -->
-    <div class="group-label g-doubles">2B · Doubles — Active Listings (Signed Representation)</div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">Simon Land — 10 Acres</div><div><span class="deal-status ds-listing">🆕 LIVE — Internal Campaign</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta"><span class="mp success">✅ Live with Great Marketing Campaign</span></div>
-      <div class="deal-action"><strong>NEW DEAL — Launched 5/1</strong> alongside CVS Olivette and Prospect Yards. Great internal marketing campaign running. Drive buyer outreach.</div>
-    </div>
-
-    <!-- ── 1B SINGLES ── -->
-    <div class="group-label g-singles">1B · Singles — Prospective Clients</div>
-
-    <div class="deal-card c-singles">
-      <div class="deal-header">
-        <div><div class="deal-name">Shoppes at Winghaven</div><div><span class="deal-status ds-singles">Investment Opportunity</span></div></div>
-        <div class="deal-value">$1.6M</div>
-      </div>
-      <div class="deal-meta"><span class="mp alert">Capital Call Apr 30</span><span class="mp warn">Decide This Weekend</span></div>
-      <div class="deal-action"><strong>Tom Milford (Scout Capital)</strong> — equity decision. In or out by Sunday. Don't let this expire without a conscious choice.</div>
-    </div>
-
-    <div class="deal-card c-singles">
-      <div class="deal-header">
-        <div><div class="deal-name">Willowbrook Plaza</div><div><span class="deal-status ds-singles">⭐ TOP OF SINGLES — Call Esther</span></div></div>
-        <div class="deal-value">$2.1M</div>
-      </div>
-      <div class="deal-meta"><span class="mp warn">No Outreach This Week</span></div>
-      <div class="deal-action"><strong>TOP PRIORITY — Call Esther Deutsch today or Monday.</strong> Eddie flagged Willowbrook as top of Singles 5/1.</div>
-    </div>
-
-    <div class="deal-card c-singles">
-      <div class="deal-header">
-        <div><div class="deal-name">4014 Chouteau</div><div><span class="deal-status ds-singles">Listing Opportunity</span></div></div>
-        <div class="deal-value">$895K</div>
-      </div>
-      <div class="deal-meta"><span class="mp warn">No Launch Date Set</span></div>
-      <div class="deal-action">Listing ready. Assign a launch date this week — leaving it open-ended means it never launches.</div>
-    </div>
-
-    <div class="deal-card c-singles" style="border-left-color:#c9a84c;background:#FFFBEB;">
-      <div class="deal-header">
-        <div><div class="deal-name">Woodlawn Plaza / SC</div><div><span class="deal-status" style="background:#FFF8EE;color:#854F0B;">⭐ TOP OF SINGLES — Reply Paul Fusz</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta"><span class="mp success">✅ Paul Fusz Replied 5/1 12:41 PM</span><span class="mp warn">Email UNREAD — Respond Today</span></div>
-      <div class="deal-action"><strong>TOP PRIORITY — Eddie flagged Woodlawn as top of Singles 5/1.</strong> Paul Fusz replied 12:41 PM today after yesterday's office meeting. Open the email and respond. Get the proposal out. Sign this listing.</div>
-    </div>
-
-    <div class="deal-card c-cold">
-      <div class="deal-header">
-        <div><div class="deal-name">Scooter's — St. Peter's, MO</div><div><span class="deal-status ds-cold">CLOSED — Passed</span></div></div>
-        <div class="deal-value">N/A</div>
-      </div>
-      <div class="deal-meta"><span class="mp">Fefer: "Onto the next!" 4/27</span></div>
-      <div class="deal-action">Eddie passed on 4/27 — price not a fit. Fefer confirmed and moved on. Off the board. Good clean decision.</div>
-    </div>
-
-    <div class="deal-card c-singles">
-      <div class="deal-header">
-        <div><div class="deal-name">Lenny Linsker — Eastlake, OH</div><div><span class="deal-status ds-singles">Opportunity</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta"><span class="mp info">The Vineyards SC · 22K SF Vacancy</span></div>
-      <div class="deal-action">Entertainment/experiential tenant needed. Lenny is in your corner. Review OM and reply Monday.</div>
-    </div>
-
-    <div class="deal-card c-singles">
-      <div class="deal-header">
-        <div><div class="deal-name">Lenny Linsker — Paris, IL</div><div><span class="deal-status ds-singles">Opportunity</span></div></div>
-        <div class="deal-value">~$1M</div>
-      </div>
-      <div class="deal-meta"><span class="mp info">RP Lumber SC · NNN Discussion</span></div>
-      <div class="deal-action">NNN lease pricing discussion underway. Review OM and provide feedback to Lenny.</div>
-    </div>
-
-    <div class="deal-card c-singles">
-      <div class="deal-header">
-        <div><div class="deal-name">Harbor Freight Sublease — Washington, MO</div><div><span class="deal-status ds-singles">Exploration</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta"><span class="mp info">Scot Herod / Newmark · 93 Washington Heights Dr</span></div>
-      <div class="deal-action">Active thread with Herod. Follow up on status and next step.</div>
-    </div>
-
-    <div class="deal-card c-singles">
-      <div class="deal-header">
-        <div><div class="deal-name">Harbor Freight — Florissant, MO</div><div><span class="deal-status ds-singles">⭐ Follow Up Needed</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta"><span class="mp warn">Eddie flagged 5/1 — separate from Washington MO</span></div>
-      <div class="deal-action">Eddie flagged follow-up on Harbor Freight for Florissant, MO. Separate opportunity from the Washington MO sublease. Identify the right contact and reach out this week.</div>
-    </div>
-
-    <div class="deal-card c-singles" style="border-left-color:#ef4444;background:#fff8f8;">
-      <div class="deal-header">
-        <div><div class="deal-name">Sam Ramadan — 1031 Exchange</div><div><span class="deal-status ds-alert">🔴 FIND A 1031 — PRIORITY</span></div></div>
-        <div class="deal-value">TBD</div>
-      </div>
-      <div class="deal-meta"><span class="mp alert">Sam Ramadan · Triple Crown · Piasa Center</span><span class="mp warn">sam.triplecrown@yahoo.com</span></div>
-      <div class="deal-action"><strong>Eddie flagged 5/1: Find a 1031 exchange property for Sam Ramadan.</strong> Sam (Triple Crown / Piasa Center) needs a replacement property. Get exchange amount, property type preference, and deadline from Sam — then search your active inventory and network. This is a buyer lead on something in your pipeline.</div>
-    </div>
-
-    <!-- ── HR HOMERUNS ── -->
-    <div class="group-label g-homeruns">HR · Homeruns — Closed This Cycle</div>
-
-    <div class="deal-card c-homeruns">
-      <div class="deal-header">
-        <div><div class="deal-name">Nothing on the board yet</div><div><span class="deal-status ds-homeruns">Zero Closed This Cycle</span></div></div>
-        <div class="deal-value">$0</div>
-      </div>
-      <div class="deal-meta">
-        <span class="mp">Next Up: Olive Blvd — Close 6/4</span>
-        <span class="mp">Then: Lindbergh — Close 6/10</span>
-        <span class="mp">Then: Broadway — Close 6/26</span>
-      </div>
-      <div class="deal-action">Four deals rounding third base and heading home by July. Watson Rd can join them — Daniel at Twin Valley Capital is ready to sign with one revision. Gutermuth too if you've followed up on Lutgen's reply. Three phone calls before 10 AM this morning change everything. The scoreboard is waiting.</div>
-    </div>
-
+    <div class="deal-action"><strong>12:30 PM call today</strong> with Amanda, Julie, and Linsker. Title file forwarded last night — they're ready. Align on TIF strategy + legal structure. Ollie's EDA + roof proposal + TIF = deal is accelerating.</div>
   </div>
+
+  <div class="deal-card c-triples" style="border-left-color:#f59e0b;">
+    <div class="deal-header">
+      <div><div class="deal-name">Tenholder Plaza</div><div><span class="deal-status ds-psa">HVAC — DISCLOSE TO BERG</span></div></div>
+      <div class="deal-value">$9.21M</div>
+    </div>
+    <div class="deal-meta">
+      <span class="mp warn">HVAC Issue — Flagged by Klamen + Cozad</span>
+      <span class="mp alert">Greg Berg — No OM Response (Day 2)</span>
+      <span class="mp success">Tanner Brawley CA — Brauvin</span>
+      <span class="mp success">Tommy Darcey + Adrian Paras CA</span>
+    </div>
+    <div class="deal-action"><strong>Call Greg Berg today.</strong> OM went out Monday night; Berg hasn't responded and doesn't know about the HVAC issue. Call first: "Hey Greg, wanted to flag something before you dig deeper." Also call Tanner Brawley (tbrawley@brauvin.com, 312.759.7688) — Brauvin is a serious NNN buyer.</div>
+  </div>
+
+  <div class="deal-card c-triples">
+    <div class="deal-header">
+      <div><div class="deal-name">295 N. Lindbergh</div><div><span class="deal-status ds-contract">Under Contract</span></div></div>
+      <div class="deal-value">$2.2M</div>
+    </div>
+    <div class="deal-meta"><span class="mp alert">DD: May 11 — 5 Days</span><span class="mp">Close: 6/10</span><span class="mp">Ben</span></div>
+    <div class="deal-action">Five days to due diligence. Get status from Ben in a gap today — inspections, title, buyer satisfaction.</div>
+  </div>
+
+  <div class="deal-card c-triples">
+    <div class="deal-header">
+      <div><div class="deal-name">6733 Olive Blvd</div><div><span class="deal-status ds-contract">Under Contract — Extension Needed</span></div></div>
+      <div class="deal-value">$770K</div>
+    </div>
+    <div class="deal-meta"><span class="mp">DD: 5/20</span><span class="mp warn">Phase 2 Environmental</span></div>
+    <div class="deal-action">Lock extension terms in writing this week. Don't let a technical miss kill a live deal.</div>
+  </div>
+
+  <div class="deal-card c-triples">
+    <div class="deal-header">
+      <div><div class="deal-name">700 S Broadway</div><div><span class="deal-status ds-contract">Under Contract</span></div></div>
+      <div class="deal-value">$625K</div>
+    </div>
+    <div class="deal-meta"><span class="mp">DD: 6/11</span><span class="mp">Close: 6/26</span><span class="mp">Ben</span></div>
+    <div class="deal-action">On track. Monitor with Ben.</div>
+  </div>
+
+  <div class="deal-card c-triples">
+    <div class="deal-header">
+      <div><div class="deal-name">11329 Lackland Rd</div><div><span class="deal-status ds-contract">Under Contract</span></div></div>
+      <div class="deal-value">$325K</div>
+    </div>
+    <div class="deal-meta"><span class="mp">DD: 6/9</span><span class="mp">Close: 7/9</span><span class="mp warn">Backup Offer — Patel</span></div>
+    <div class="deal-action">Accept Patel backup per Caleb's recommendation.</div>
+  </div>
+
+  <div class="deal-card c-triples" style="border-left-color:#1D9E75;">
+    <div class="deal-header">
+      <div><div class="deal-name">8523 Watson Rd</div><div><span class="deal-status ds-contract">&#x1F195; NEW PSA — New Buyer (5/5)</span></div></div>
+      <div class="deal-value">$525K</div>
+    </div>
+    <div class="deal-meta">
+      <span class="mp success">DocuSign Complete — Termination + New PSA 5/5</span>
+      <span class="mp warn">Confirm DD + Closing Timeline</span>
+    </div>
+    <div class="deal-action"><strong>Old deal terminated, new PSA executed last night via DocuSign.</strong> Confirm DD deadline, EMD, and closing timeline with new buyer ASAP. Moved from cold to under contract in one day.</div>
+  </div>
+
+  <div class="deal-card c-triples" style="border-left-color:#ef4444;">
+    <div class="deal-header">
+      <div><div class="deal-name">3601 Jeffco Blvd</div><div><span class="deal-status ds-alert">Counter — 9 Days Silent</span></div></div>
+      <div class="deal-value">$2.725M</div>
+    </div>
+    <div class="deal-meta"><span class="mp alert">Jason Morgan (CCR) — 9 Days No Response</span><span class="mp">Counter Sent 4/27 @ 8.58 CAP</span></div>
+    <div class="deal-action"><strong>Call jm@ccr-stl.com today.</strong> Nine days. One call. "Where do we stand?" Text + email if no pickup. This deal is dying in silence.</div>
+  </div>
+
+  <div class="deal-card c-triples">
+    <div class="deal-header">
+      <div><div class="deal-name">Kink Salon</div><div><span class="deal-status ds-loi">LOI — 2 Conditions Pending</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">Tenant Financials → Landlord</span><span class="mp warn">Lender Approval</span></div>
+    <div class="deal-action">Two conditions to clear. Push both tracks this week.</div>
+  </div>
+
+  <div class="deal-card c-triples">
+    <div class="deal-header">
+      <div><div class="deal-name">Gutermuth Assemblage</div><div><span class="deal-status ds-psa">Awaiting Seller — 9+ Days</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">$5.50 PSF Offer — Caleb + Valentine</span></div>
+    <div class="deal-action">Approaching two weeks with no seller response. Push Valentine for a definitive answer this week.</div>
+  </div>
+
+  <div class="deal-card c-triples">
+    <div class="deal-header">
+      <div><div class="deal-name">Arrowhead Point (Harrisburg)</div><div><span class="deal-status ds-contract">Under Contract</span></div></div>
+      <div class="deal-value">$500K</div>
+    </div>
+    <div class="deal-meta"><span class="mp success">Progressing</span><span class="mp">Weissman Corp downstream</span></div>
+    <div class="deal-action">On track. Monitor alongside main Harrisburg deal.</div>
+  </div>
+
+  <div class="group-label g-doubles">2B Doubles — Active Listings</div>
+
+  <div class="deal-card c-doubles" style="border-left-color:#ef4444;">
+    <div class="deal-header">
+      <div><div class="deal-name">CVS Olivette</div><div><span class="deal-status ds-listing">HOT — 11+ CAs</span></div></div>
+      <div class="deal-value">$5.5M</div>
+    </div>
+    <div class="deal-meta">
+      <span class="mp success">&#x1F195; Tanner Brawley (Brauvin) — Principal 5/5</span>
+      <span class="mp success">&#x1F195; Christopher Kool (RJC) — Principal (UNREAD)</span>
+      <span class="mp success">Tommy Darcey · Adrian Paras · PappasCardone</span>
+      <span class="mp">Goodwin · Kadish · Wright · Bala + more</span>
+    </div>
+    <div class="deal-action"><strong>Call Brawley (tbrawley@brauvin.com, 312.759.7688) and Kool (chris@rjcinvestments.com, 314.607.9567) today.</strong> Both are principals. "What would it take to get an offer this week?" Eleven CAs with no offer = momentum. Convert it.</div>
+  </div>
+
+  <div class="deal-card c-doubles" style="border-left-color:#ef4444;">
+    <div class="deal-header">
+      <div><div class="deal-name">American Freight / Fairview Hts (IGC)</div><div><span class="deal-status ds-alert">7 DAYS — NO PSA</span></div></div>
+      <div class="deal-value">$3.5M</div>
+    </div>
+    <div class="deal-meta"><span class="mp alert">Adam Goldschmidt — "I'll Get Approval" Apr 29</span><span class="mp">Spaces 6 &amp; 7 · 10-Yr Lease</span></div>
+    <div class="deal-action"><strong>Call adam@masonam.com today — hard deadline Thursday EOD.</strong> Documents or an explanation. No more waiting.</div>
+  </div>
+
+  <div class="deal-card c-doubles" style="border-left-color:#ef4444;">
+    <div class="deal-header">
+      <div><div class="deal-name">Wildhorse Fitness</div><div><span class="deal-status ds-psa">PSA Out — Day 5, No Signature</span></div></div>
+      <div class="deal-value">$1.625M</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">PSA Out Since 5/1 — Day 5</span><span class="mp">Michelle Moshiri (Crexi)</span></div>
+    <div class="deal-action">Call the other side in your 10:30–12 window today. Something is stuck. Find it and fix it.</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">Jeff Lage Portfolio — St. Charles</div><div><span class="deal-status ds-alert">Listing Agreement Unsigned</span></div></div>
+      <div class="deal-value">$17–18M</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">Post Fusz Meeting 4/24</span></div>
+    <div class="deal-action">You met with Paul Fusz this morning. Follow up on Lage Portfolio listing agreement in EOD email. This doesn't move until it's signed.</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">Prospect Yards</div><div><span class="deal-status ds-listing">Active Listing</span></div></div>
+      <div class="deal-value">$2.75M</div>
+    </div>
+    <div class="deal-meta"><span class="mp success">Live — All Sites</span></div>
+    <div class="deal-action">Follow up with Paul Fusz on develop vs. sell after this morning's tours.</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">Simon Land — 10 Acres</div><div><span class="deal-status ds-listing">Active — Campaign Running</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp success">Marketing Live</span></div>
+    <div class="deal-action">Push Ben and Caleb on direct buyer outreach this week.</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">Jenks Primary Parcel</div><div><span class="deal-status ds-blocked">Blocked — Fill Issue</span></div></div>
+      <div class="deal-value">$4.1M</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">Fill Issue Being Resolved</span></div>
+    <div class="deal-action">Fill resolution unlocks both Jenks parcels ($7.6M combined).</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">Jenks Neighboring Parcel</div><div><span class="deal-status ds-loi">LOI</span></div></div>
+      <div class="deal-value">$3.5M</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">Linked to Primary</span></div>
+    <div class="deal-action">$7.6M combined with Primary when fill resolves.</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">Wentzville Site</div><div><span class="deal-status ds-blocked">Awaiting Offer</span></div></div>
+      <div class="deal-value">$3–4M</div>
+    </div>
+    <div class="deal-meta"><span class="mp">BJC + Crunch Fitness</span></div>
+    <div class="deal-action">Schedule BJC call this week. "Looking" does not equal buying.</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">7530 Maryland — Clayton</div><div><span class="deal-status ds-blocked">Price Reduction Stalled</span></div></div>
+      <div class="deal-value">$1.15M</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">Schneider — No Activity</span></div>
+    <div class="deal-action">Call Schneider or qualify the next buyer. Silence is slow death.</div>
+  </div>
+
+  <div class="deal-card c-doubles">
+    <div class="deal-header">
+      <div><div class="deal-name">Granite City Portfolio</div><div><span class="deal-status ds-active">3 CAs + Eisenberg Interest</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp success">Zenkevicius · Patel · Dhillon</span><span class="mp success">Eisenberg Buyer 4/27</span></div>
+    <div class="deal-action">Create urgency across competing parties. More competition = better outcome.</div>
+  </div>
+
+  <div class="group-label g-singles">1B Singles — Prospective Clients</div>
+
+  <div class="deal-card c-singles" style="border-left-color:#ef4444;background:#fff5f5;">
+    <div class="deal-header">
+      <div><div class="deal-name">Willowbrook Plaza</div><div><span class="deal-status ds-alert">&#x1F525; ESTHER CALL TODAY 1 PM — PREP NOW</span></div></div>
+      <div class="deal-value">$2.1M</div>
+    </div>
+    <div class="deal-meta">
+      <span class="mp alert">Call at 1:00 PM TODAY w/ Caleb</span>
+      <span class="mp success">Joshua Rosemore (Principal) CA</span>
+      <span class="mp success">Manny Landau CA</span>
+    </div>
+    <div class="deal-action"><strong>Two principals executed CAs this week. The market wants this property.</strong> Know your listing price, comps, and pitch before 1 PM. Walk in like you already have the listing — that confidence closes listing agreements.</div>
+  </div>
+
+  <div class="deal-card c-singles" style="border-left-color:#c9a84c;background:#fffbeb;">
+    <div class="deal-header">
+      <div><div class="deal-name">House of Denmark</div><div><span class="deal-status" style="background:#FFF8EE;color:#854F0B;">TOURS THIS MORNING — Paul Fusz</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp success">17906 Edison Ave + Olive Showroom</span><span class="mp">w/ Ben</span></div>
+    <div class="deal-action">Tours happening 8 AM today with Paul Fusz. Follow up with Paul EOD — and bring up Woodlawn Plaza listing proposal while you have the relationship warm.</div>
+  </div>
+
+  <div class="deal-card c-singles" style="border-left-color:#c9a84c;background:#fffbeb;">
+    <div class="deal-header">
+      <div><div class="deal-name">Woodlawn Plaza</div><div><span class="deal-status" style="background:#FFF8EE;color:#854F0B;">Paul Fusz — Proposal Pending</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp success">Paul Replied 5/1 — "Looking Forward!"</span><span class="mp warn">Proposal Not Sent Yet</span></div>
+    <div class="deal-action">You're with Paul this morning. Follow up on Woodlawn in the EOD email after House of Denmark tours. Don't let the morning warmth fade.</div>
+  </div>
+
+  <div class="deal-card c-singles">
+    <div class="deal-header">
+      <div><div class="deal-name">334 N. Main St — St. Charles</div><div><span class="deal-status ds-new">Site Visit Today — 9:30 AM</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp">Code: 0930#</span></div>
+    <div class="deal-action">Confirm the deal context before walking in. What's the ask? What's the outcome?</div>
+  </div>
+
+  <div class="deal-card c-singles">
+    <div class="deal-header">
+      <div><div class="deal-name">Kitchen Conservatory</div><div><span class="deal-status ds-new">Call Today — 12:00 PM</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp">New Prospect</span></div>
+    <div class="deal-action">Prep your pitch before noon. Know what you want from the call.</div>
+  </div>
+
+  <div class="deal-card c-singles">
+    <div class="deal-header">
+      <div><div class="deal-name">Sam Ramadan — 1031 Exchange</div><div><span class="deal-status ds-alert">Find a 1031 Property</span></div></div>
+      <div class="deal-value">TBD</div>
+    </div>
+    <div class="deal-meta"><span class="mp alert">Triple Crown · Piasa Center</span></div>
+    <div class="deal-action">Get exchange amount, property type, and deadline from Sam. Match to active inventory.</div>
+  </div>
+
+  <div class="deal-card c-singles">
+    <div class="deal-header">
+      <div><div class="deal-name">4014 Chouteau</div><div><span class="deal-status ds-new">Ready — No Launch Date</span></div></div>
+      <div class="deal-value">$895K</div>
+    </div>
+    <div class="deal-meta"><span class="mp warn">No Timeline Set</span></div>
+    <div class="deal-action">Assign a launch date. Open-ended listings never launch.</div>
+  </div>
+
+  <div class="group-label g-homeruns">HR Homeruns — Closed This Cycle</div>
+  <div class="deal-card c-homeruns">
+    <div class="deal-header">
+      <div><div class="deal-name">Nothing closed yet</div><div><span class="deal-status" style="background:var(--hr-bg);color:var(--hr-text);">Three rounding third</span></div></div>
+      <div class="deal-value">$0</div>
+    </div>
+    <div class="deal-meta">
+      <span class="mp">Olive ~6/4</span>
+      <span class="mp">Lindbergh ~6/10</span>
+      <span class="mp">Broadway ~6/26</span>
+    </div>
+    <div class="deal-action">Protect all three by keeping deals moving today. The scoreboard is waiting.</div>
+  </div>
+
+</div>
 </div>
 
-<!-- ══════════════════════════════════════════ -->
-<!--  URGENT TAB                               -->
-<!-- ══════════════════════════════════════════ -->
+<!-- URGENT TAB -->
 <div id="urgent" class="tab-content">
-
   <div class="urgent-banner">
-    <h3>Priority Actions — Updated Fri 5/1 PM (Eddie Update)</h3>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>🔥 CVS OLIVETTE — 4 CAs DAY 1. CALL ALL BUYERS.</strong> Zach Wright · Nat Bala · Nikolas Burmeister · Christian Becker · Jan King. Call every one — weekend is not an excuse to wait.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>⭐ WOODLAWN + WILLOWBROOK — TOP OF SINGLES.</strong> Paul Fusz replied 5/1 — open and respond, send proposal. Esther Deutsch (Willowbrook) — call Monday. Both flagged by Eddie as top priority.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>🔴 FIND A 1031 FOR SAM RAMADAN.</strong> Flagged by Eddie 5/1. Sam (Triple Crown / Piasa Center) needs a replacement property. Call Sam: get exchange amount, property type, deadline. Then match to your pipeline.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>GREG BERG — CALL MONDAY AFTER TENHOLDER UNDERWRITING.</strong> Berg is running numbers on Tenholder ($9.21M) this weekend. He is the ideal buyer. Call Monday — don't let him go cold.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>IGC — PSA + LEASE NEXT WEEK.</strong> Nearly fully agreed. Confirm timeline with Adam Mon to keep momentum. This one needs to cross the finish line.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>WILDHORSE PSA IS OUT — WATCH FOR EXECUTION.</strong> Follow up if no signature by Monday. This is ready to close.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>JEFFCO — JASON MORGAN STILL SILENT.</strong> Counter at $2,725,000 sent 4/27. Call or text jm@ccr-stl.com this weekend. Deals die in silence.</div></div>
+    <h3>Priority Actions — Updated Wed 5/6 AM</h3>
+    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>ESTHER G. CALL TODAY 1 PM — WILLOWBROOK — PREP BEFORE NOON.</strong> Two principals have CAs. Caleb has the meeting. Know your listing price, comps, and pitch. Walk in like you already have it.</div></div>
+    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>HARRISBURG LEGAL CALL TODAY 12:30 PM — AMANDA + JULIE + LINSKER.</strong> Attorneys engaged, title file forwarded last night. Align on TIF + legal structure. Ollie's EDA is in motion.</div></div>
+    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>IGC / ADAM — 7 DAYS. CALL TODAY. HARD DEADLINE THURSDAY EOD.</strong> adam@masonam.com. Documents by Thursday or move on.</div></div>
+    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>JEFFCO — JASON MORGAN 9 DAYS SILENT. CALL TODAY.</strong> jm@ccr-stl.com. "Where do we stand?" One call. Dead or alive — find out.</div></div>
+    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>WILDHORSE PSA — DAY 5. CALL OTHER SIDE IN 10:30 AM WINDOW.</strong> Something is stuck. Name it and fix it.</div></div>
+    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>CVS OLIVETTE — BRAWLEY (BRAUVIN) + KOOL (RJC) — CALL BOTH IN 10:30 AM WINDOW.</strong> tbrawley@brauvin.com · 312.759.7688 · chris@rjcinvestments.com · 314.607.9567. Both principals, both uncontacted.</div></div>
+    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>WATSON RD — NEW PSA EXECUTED LAST NIGHT. CONFIRM DD + EMD + CLOSING TIMELINE.</strong> DocuSign complete. New buyer is live. Lock in the details today.</div></div>
   </div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>⭐ PAUL FUSZ REPLIED ABOUT WOODLAWN — UNREAD.</strong> Email received 12:41 PM today: "Re: Woodlawn Plaza // Manor Real Estate" — he's responding to yesterday's office meeting. Open it and reply before end of day. This is your listing opportunity.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>WATSON RD — SHOWING TODAY 11 AM (TWIN VALLEY CAPITAL).</strong> Daniel (daniel@twinvalleycapital.com) at the property now. Walk in with your ask. AHM call is also 11 AM — Watson is the revenue priority. Decide and communicate.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>🚨 HARRISBURG TITLE CLOUD — DAY 3.</strong> PSA signed 4/28. Docs forwarded to Lenny 4/29. Call Lenny TODAY for concrete cure timeline. Weissman downstream sale is blocked until title is clean. Don't assume Lenny is moving.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>IGC COUNTER — 2+ DAYS OLD.</strong> Adam (adam@masonam.com) sent IGC counter: Spaces 6 &amp; 7, 10-yr lease, 2×5-yr options. Work block at 2:30 PM today. Use it. Respond today.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>JEFFCO BLVD — JASON MORGAN SILENT 4 DAYS.</strong> Counter at $2,725,000 / 8.58 CAP sent 4/27. Call Jason Morgan (jm@ccr-stl.com) today. Silence is how deals die.</div></div>
-    <div class="urgent-item"><div class="urgent-dot"></div><div><strong>PLAZA ON THE BLVD — NEW DEAL THREAD.</strong> Remy Duvoisin (AZT Corporation, Dallas) sent high-priority revised document today. Eddie replied. Make sure this deal is tracked in the pipeline.</div></div>
-  </div>
-
   <div class="section">
-    <div class="group-label g-cold">Deals Going Cold — Call This Week</div>
-
-    <div class="deal-card c-triples">
-      <div class="deal-header">
-        <div><div class="deal-name">8523 Watson Rd</div><div><span class="deal-status ds-psa">Active Showing — Twin Valley Capital</span></div></div>
-        <div class="deal-value">$525K</div>
-      </div>
-      <div class="deal-action">Daniel (daniel@twinvalleycapital.com) — showing TODAY 11 AM. New buyer opportunity. Walk in with your number.</div>
-    </div>
-
+    <div class="group-label g-cold">Deals Going Cold</div>
     <div class="deal-card c-cold">
-      <div class="deal-header">
-        <div><div class="deal-name">7530 Maryland — Clayton</div><div><span class="deal-status ds-cold">Stalled</span></div></div>
-        <div class="deal-value">$1.15M</div>
-      </div>
-      <div class="deal-action">Price reduction approval stalled all week. Call Schneider Monday or qualify a new buyer.</div>
+      <div class="deal-header"><div><div class="deal-name">7530 Maryland</div><div><span class="deal-status ds-cold">Stalled</span></div></div><div class="deal-value">$1.15M</div></div>
+      <div class="deal-action">Call Schneider or move to next buyer. Silence is slow death.</div>
     </div>
-
     <div class="deal-card c-cold">
-      <div class="deal-header">
-        <div><div class="deal-name">Willowbrook Plaza — Esther Deutsch</div><div><span class="deal-status ds-cold">No Outreach</span></div></div>
-        <div class="deal-value">$2.1M</div>
-      </div>
-      <div class="deal-action">No outreach all week. Call Monday. If she's not engaged, drop from Singles and stop counting it.</div>
+      <div class="deal-header"><div><div class="deal-name">Wentzville</div><div><span class="deal-status ds-cold">Still "Looking"</span></div></div><div class="deal-value">$3–4M</div></div>
+      <div class="deal-action">Schedule the BJC call this week. Looking does not equal buying.</div>
     </div>
-
     <div class="deal-card c-cold">
-      <div class="deal-header">
-        <div><div class="deal-name">Wildhorse Fitness</div><div><span class="deal-status ds-cold">PSA Not Moving</span></div></div>
-        <div class="deal-value">$1.625M</div>
-      </div>
-      <div class="deal-action">LOI signed, PSA in draft limbo. Push your attorney Monday. New Crexi inquiry (Michelle Moshiri) to follow up.</div>
+      <div class="deal-header"><div><div class="deal-name">Gutermuth Assemblage</div><div><span class="deal-status ds-cold">9+ Days No Seller Response</span></div></div><div class="deal-value">TBD</div></div>
+      <div class="deal-action">Push Steve Valentine for a definitive seller answer this week.</div>
     </div>
-
-    <div class="deal-card c-doubles">
-      <div class="deal-header">
-        <div><div class="deal-name">CVS Olivette</div><div><span class="deal-status ds-listing">🔥 LIVE — 4 CAs Executed Day 1</span></div></div>
-        <div class="deal-value">$5.5M</div>
-      </div>
-      <div class="deal-action">Went live today at $5.5M. Zach Wright, Nat Bala, Nikolas Burmeister, Christian Becker — 4 CAs in 3 hours. Jan King printed OM. Call all of them today.</div>
-    </div>
-
-    <div class="deal-card c-cold">
-      <div class="deal-header">
-        <div><div class="deal-name">4014 Chouteau</div><div><span class="deal-status ds-cold">No Launch Date</span></div></div>
-        <div class="deal-value">$895K</div>
-      </div>
-      <div class="deal-action">Listing ready with no timeline. Assign a launch date in Monday's planning session.</div>
-    </div>
-
-    <div class="deal-card c-cold">
-      <div class="deal-header">
-        <div><div class="deal-name">Harrisburg TIF — Sam</div><div><span class="deal-status ds-cold">No Movement</span></div></div>
-        <div class="deal-value">Part of $2.1M</div>
-      </div>
-      <div class="deal-action">TIF assignment pending. Brief Sam before Mon 12:30 PM Harrisburg TIF Application block. This can't stay open.</div>
-    </div>
-
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════ -->
-<!--  CALENDAR TAB                             -->
-<!-- ══════════════════════════════════════════ -->
+<!-- CALENDAR TAB -->
 <div id="calendar" class="tab-content">
 <div class="section">
 
-  <div class="group-label" style="background:#fef2f2;color:#991b1b;border:1px solid #fecaca;">TODAY — Friday, May 1 · CVS on Fire · Watson Showing · Manchester Walk · IGC Work Block</div>
+  <div class="group-label" style="background:#fef2f2;color:#991b1b;border:1px solid #fecaca;">TODAY — Wednesday, May 6 — Full Day</div>
 
-  <div class="cal-item newitem">
-    <div class="cal-date"><div class="cal-day">1</div><div class="cal-dow">Fri</div></div>
-    <div class="cal-content">
-      <div class="cal-title">✅ Brainstorm @ 4014 Chouteau (w/ Jack J) — DONE</div>
-      <div class="cal-detail">9:00 AM · Did you set a launch date? If not, this morning happened for nothing.</div>
-    </div>
+  <div class="cal-item highlight">
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">8:00 AM — House of Denmark Tours (w/ Ben &amp; Paul Fusz)</div><div class="cal-detail">17906 Edison Ave (Chesterfield), then showroom on Olive. Follow up with Paul EOD re: Woodlawn Plaza proposal.</div></div>
   </div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">1</div><div class="cal-dow">Fri</div></div>
-    <div class="cal-content">
-      <div class="cal-title">Send Woodlawn Proposal &amp; Ideas</div>
-      <div class="cal-detail">10:30 AM · Task block — Paul Fusz replied. Open his email, respond, and get the proposal out.</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">9:30 AM — Visit 334 N. Main St, St. Charles — Code: 0930#</div><div class="cal-detail">New site visit. Confirm deal context before arriving.</div></div>
   </div>
-
-  <div class="cal-item conflict">
-    <div class="cal-date"><div class="cal-day">1</div><div class="cal-dow">Fri</div></div>
-    <div class="cal-content">
-      <div class="cal-title">⚠ CONFLICT: Watson Walk (11 AM) vs. AHM Bi-Weekly Call (11 AM)</div>
-      <div class="cal-detail">Watson with Daniel (Twin Valley Capital) is the revenue call — priority. Delegate or reschedule AHM.</div>
-    </div>
-  </div>
-  <div class="cal-item newitem" style="border-left:3px solid #c9a84c;background:#FFFBEB;">
-    <div class="cal-date"><div class="cal-day">1</div><div class="cal-dow">Fri</div></div>
-    <div class="cal-content">
-      <div class="cal-title">🔥 CVS Olivette LIVE — 4 CAs executed, Jan King printed OM</div>
-      <div class="cal-detail">Call Zach Wright, Nat Bala, Nikolas Burmeister, Christian Becker TODAY. Hot window closes fast.</div>
-    </div>
+  <div class="cal-item highlight">
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">10:30–12:00 PM — &#x26A1; DEAL CALL WINDOW (90 MIN)</div><div class="cal-detail">Adam (IGC), Jason Morgan (Jeffco), Wildhorse PSA, Tanner Brawley (Brauvin), Christopher Kool (RJC), Greg Berg. Do these calls here.</div></div>
   </div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">1</div><div class="cal-dow">Fri</div></div>
-    <div class="cal-content">
-      <div class="cal-title">Meet 314-250-4530 @ 5723 Manchester</div>
-      <div class="cal-detail">1 PM · Know who this is before you walk in. Tenant? Buyer? Come with your pitch.</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">12:00 PM — Kitchen Conservatory Call</div><div class="cal-detail">New prospect. Prep pitch — know what you want from the call.</div></div>
+  </div>
+  <div class="cal-item highlight">
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">12:30 PM — Harrisburg Legal Discussion (Amanda + Julie + Linsker)</div><div class="cal-detail">Amanda &amp; Julie (AO Law STL) + llinsker@gmail.com. Title file forwarded last night — ready to go. Align on TIF + legal structure.</div></div>
+  </div>
+  <div class="cal-item" style="border-left: 3px solid #ef4444; background:#fff5f5;">
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">1:00 PM — Call with Esther G. (w/ Caleb) — WILLOWBROOK &#x1F525;</div><div class="cal-detail">Your top singles deal. Know your comps, listing price, and marketing plan. Walk in like you already have it.</div></div>
   </div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">1</div><div class="cal-dow">Fri</div></div>
-    <div class="cal-content">
-      <div class="cal-title">Weekly Accountability + HFT / Jeffco / IGC Work Block</div>
-      <div class="cal-detail">1:00–3:00 PM · IGC response, Jeffco call, HFT next steps</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">2:00 PM — Tour of Amherst (+1 870-275-3409)</div><div class="cal-detail">Confirm deal context before the call.</div></div>
+  </div>
+  <div class="cal-item highlight">
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">3:00–5:00 PM — &#x1F4CB; ICSC LIST + FOLLOW-UP WINDOW</div><div class="cal-detail">Build ICSC meeting list — 5–8 targets, send requests. Watson Rd DD follow-up. Olive Blvd extension docs.</div></div>
+  </div>
+  <div class="cal-item">
+    <div class="cal-date"><div class="cal-day">6</div><div class="cal-dow">Wed</div></div>
+    <div class="cal-content"><div class="cal-title">5:00 PM — Pickup Jack | 6:30 PM — Pickup Chicken Scratch @ 9900 Manchester</div><div class="cal-detail">Personal.</div></div>
   </div>
 
-  <div class="group-label" style="background:#f7f9fc;color:var(--text-muted);border:1px solid var(--border);">Monday, May 4 — Big Internal Day</div>
+  <div class="group-label" style="background:#f7f9fc;color:var(--text-muted);border:1px solid var(--border);">Thursday, May 7</div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">4</div><div class="cal-dow">Mon</div></div>
-    <div class="cal-content">
-      <div class="cal-title">Manor Commercial Weekly + Brokerage Sales Meeting</div>
-      <div class="cal-detail">10 AM · Teams · Walk in with Jeffco update, IGC status, Harrisburg title resolution</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">7</div><div class="cal-dow">Thu</div></div>
+    <div class="cal-content"><div class="cal-title">9:00 AM — Coffee w/ Chaim @ Chabad Delmar (8124 Delmar Blvd)</div><div class="cal-detail">Relationship meeting. Come with a clear purpose.</div></div>
   </div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">4</div><div class="cal-dow">Mon</div></div>
-    <div class="cal-content">
-      <div class="cal-title">Annual Physical</div>
-      <div class="cal-detail">3 PM · 969 N Mason Rd</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">7</div><div class="cal-dow">Thu</div></div>
+    <div class="cal-content"><div class="cal-title">10:30 AM — Cold Call Fitness Users AHM @ Manor (Caleb leading)</div><div class="cal-detail">Show up prepared. Know the targets before you walk in.</div></div>
   </div>
 
-  <div class="group-label" style="background:#f7f9fc;color:var(--text-muted);border:1px solid var(--border);">Tuesday, May 5 — Packed Day</div>
+  <div class="group-label" style="background:#f7f9fc;color:var(--text-muted);border:1px solid var(--border);">Friday, May 8</div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">5</div><div class="cal-dow">Tue</div></div>
-    <div class="cal-content">
-      <div class="cal-title">Referral — Amanda Auer @ Coma Coffee</div>
-      <div class="cal-detail">8:30 AM · Review engagement letter from Julie (aolawstl.com) before this meeting</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">8</div><div class="cal-dow">Fri</div></div>
+    <div class="cal-content"><div class="cal-title">9:00 AM — Coffee w/ Loren Lettinger (Sandberg Phoenix) @ Kaldi's, Clayton</div><div class="cal-detail">Come with a specific referral ask.</div></div>
   </div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">5</div><div class="cal-dow">Tue</div></div>
-    <div class="cal-content">
-      <div class="cal-title">Alex Hutkin Lunch @ Mai Lee</div>
-      <div class="cal-detail">12 PM · 8396 Musick Memorial Dr, Brentwood</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">8</div><div class="cal-dow">Fri</div></div>
+    <div class="cal-content"><div class="cal-title">9:30 AM — Balboa + Manor Bi-Weekly Leasing Update — 11th &amp; Spruce (Teams)</div><div class="cal-detail">w/ Ben, Caleb, Balboa Group (Smith, Calahan, Farrell)</div></div>
   </div>
   <div class="cal-item">
-    <div class="cal-date"><div class="cal-day">5</div><div class="cal-dow">Tue</div></div>
-    <div class="cal-content">
-      <div class="cal-title">DBE Meeting + Manor Portfolio Meeting + Truckload</div>
-      <div class="cal-detail">2 PM, 3 PM, 4 PM back-to-back at Manor / Teams</div>
-    </div>
+    <div class="cal-date"><div class="cal-day">8</div><div class="cal-dow">Fri</div></div>
+    <div class="cal-content"><div class="cal-title">10:30 AM — Wood River Plaza Leasing Update — Schostak (Teams)</div><div class="cal-detail">w/ Caleb, Josh Schostak, Fink, Litzler</div></div>
   </div>
 
 </div>
 </div>
-�══════════════════════════════════════ -->
+
+<!-- EMAIL TAB -->
 <div id="email" class="tab-content">
 <div class="section">
 
-  <div class="group-label" style="background:#fef2f2;color:#991b1b;border:1px solid #fecaca;">Hot Emails — Friday May 1, 2026</div>
+  <div class="group-label" style="background:#ECFDF5;color:#0F6E56;border:1px solid #9FE1CB;">&#x1F195; New Since Yesterday — May 5, 2026</div>
 
-  <div class="email-item e-hot">
-    <div class="email-subject">⭐ UNREAD: Re: Woodlawn Plaza // Manor Real Estate — Paul Fusz</div>
-    <div class="email-meta">Paul@fuszproperties.com · 12:41 PM today · UNREAD</div>
-    <div class="email-snippet">Paul is responding to yesterday's office meeting re: transitioning leasing for Woodlawn Plaza. Open this and reply today — listing opportunity is live.</div>
+  <div class="email-item e-green">
+    <div class="email-subject">&#x2705; DocuSign: Termination &amp; Mutual Release + New PSA — 8523 Watson Rd</div>
+    <div class="email-meta">DocuSign · Tue May 5, 8:00 PM · Read</div>
+    <div class="email-snippet">All signers complete. Old buyer terminated. New PSA fully executed. Confirm DD timeline with new buyer today.</div>
   </div>
 
   <div class="email-item e-hot">
-    <div class="email-subject">🔥 CVS Olivette — 4 CAs Executed Today (Crexi)</div>
-    <div class="email-meta">Crexi · Multiple alerts 10 AM–1:30 PM today</div>
-    <div class="email-snippet">Zach Wright, Nat Bala (Principal), Nikolas Burmeister, Christian Becker — CAs executed. Jan King printed OM + clicked phone. Call all today.</div>
+    <div class="email-subject">&#x2705; Principal Tanner Brawley (Brauvin) CA — CVS Olivette</div>
+    <div class="email-meta">Crexi · Tue May 5, 5:10 PM · Read</div>
+    <div class="email-snippet">tbrawley@brauvin.com · 312.759.7688 · Major NNN fund buyer. Call today — ask about timeline and offer.</div>
   </div>
 
   <div class="email-item e-hot">
-    <div class="email-subject">RE: Plaza on the Blvd [HIGH PRIORITY] — Remy Duvoisin (AZT Corp)</div>
-    <div class="email-meta">rduvoisin@aztcorporation.com · 10:11 AM today · Eddie replied</div>
-    <div class="email-snippet">Remy (Dallas) sent revised document marked high priority. Eddie replied "Sent – thank you Remy." Track this as a new deal — not yet in pipeline.</div>
+    <div class="email-subject">&#x2705; Principal Christopher Kool (RJC Investments) CA — CVS Olivette</div>
+    <div class="email-meta">Crexi · Tue May 5, 4:08 PM · UNREAD</div>
+    <div class="email-snippet">chris@rjcinvestments.com · 314.607.9567 · Local St. Louis principal. UNREAD — call first.</div>
   </div>
 
-  <div class="email-item e-unread">
-    <div class="email-subject">Harrisburg Bids — 601 N. Commercial St (Acculynx)</div>
-    <div class="email-meta">reply@mail.acculynx.com · 10:20 AM today · Attachments</div>
-    <div class="email-snippet">Contractor bids received for Harrisburg property. Review and approve/reject — is needed before title cure work begins.</div>
+  <div class="email-item e-blue">
+    <div class="email-subject">FW: File 2659097 — 701 N Commercial St, Harrisburg (to Amanda + Julie, AO Law)</div>
+    <div class="email-meta">Eddie Cherry (sent) · Tue May 5, 7:21 PM · Read</div>
+    <div class="email-snippet">"Great getting coffee with you both!" — AO Law attorneys now engaged on Harrisburg. Call at 12:30 PM today.</div>
   </div>
 
-  <div class="email-item e-unread">
-    <div class="email-subject">UNREAD: Re: Referral — Amanda Auer (Julie AOL Law)</div>
-    <div class="email-meta">julie@aolawstl.com · 10:53 AM today · Attachment: Engagement Letter</div>
-    <div class="email-snippet">Engagement letter attached. Julie asks: who  is the client entity? Review before Tue 5/5 Coma Coffee meeting with Amanda.</div>
+  <div class="group-label" style="background:#fef2f2;color:#991b1b;border:1px solid #fecaca;">Still No Response — Waiting</div>
+
+  <div class="email-item e-hot">
+    <div class="email-subject">&#x274C; Jason Morgan (CCR) — 9 Days No Response to $2.725M Counter</div>
+    <div class="email-meta">Counter sent 4/27 · jm@ccr-stl.com</div>
+    <div class="email-snippet">Call today: "Where do we stand?" Text + email if no pickup.</div>
   </div>
 
   <div class="email-item e-hot">
-    <div class="email-subject">IGC Counter — 2+ Days Old — Work Block 2:30 PM Today</div>
-    <div class="email-meta">Adam (adam@masonam.com) · 4/29 12:38 PM</div>
-    <div class="email-snippet">Spaces 6 &amp; 7, 10-yr lease, 2×5-yr options. Use today's 2:30 PM work block. Do not let this cross the weekend unanswered.</div>
+    <div class="email-subject">&#x274C; Adam Goldschmidt (IGC) — 7 Days Since Commitment</div>
+    <div class="email-meta">"I'll get approval" 4/29 · adam@masonam.com</div>
+    <div class="email-snippet">Hard deadline: documents by Thursday EOD. Call today.</div>
   </div>
 
-  <div class="email-item e-cyan">
-    <div class="email-subject">Ollie's Economic Development Application — Forwarded with "Nice work"</div>
-    <div class="email-meta">Eddie (fwd) · 10:20 AM today</div>
-    <div class="email-snippet">Eddie endorsed the Ollie's economic dev application. Track which property this applies to.</div>
+  <div class="email-item">
+    <div class="email-subject">&#x274C; Greg Berg — No Response to Tenholder OM (Day 2)</div>
+    <div class="email-meta">OM sent Mon night</div>
+    <div class="email-snippet">Doesn't know about HVAC issue yet. Call today — proactive disclosure keeps the deal alive.</div>
+  </div>
+
+  <div class="email-item">
+    <div class="email-subject">&#x274C; Wildhorse PSA Return Signature — Day 5</div>
+    <div class="email-meta">PSA sent 5/1</div>
+    <div class="email-snippet">Call the other side in your 10:30 window. Five days means something is stuck.</div>
   </div>
 
 </div>
-  </div>
 </div>
 
 <!-- NUDGE TAB -->
 <div id="nudge" class="tab-content">
 <div class="nudge-box">
-  <h3>Strategic Nudge — May 1</h3>
-  <p>
-    <strong>CVS Olivette is your best asset today.</strong> 4 CAs in 3 hours on Day 1. Call every buyer today while the listing is fresh. Same-day follow-up is how CAs become offers.<br><br>
-    <strong>Woodlawn is knocking.</strong> Paul Fusz emailed back within 24 hours. Reply today or give the momentum back to him.<br><br>
-    <strong>Friday is not a wind-down day.</strong> Watson at 11 AM. Manchester at 1 PM. IGC at 2:30 PM. Three forward moves right in front of you. Take them.<br><br>
-    <strong>Three closings coming:</strong> Olive 6/4 · Lindbergh 6/10 · Broadway 6/26. Protect the pipeline today.
-  </p>
-</div>
-<div class="section">
-  <div class="group-label g-cold">Stalled Deals — Call This Weekend or Monday</div>
-  <div class="deal-card c-cold"><div class="deal-header"><div><div class="deal-name">Wildhorse Fitness</div><div><span class="deal-status ds-cold">PSA Stalled</span></div></div><div class="deal-value">$1.625M</div></div><div class="deal-action">LOI signed. PSA in draft limbo. Who is blocking — your attorney or theirs? Name it and fix it Monday.</div></div>
-  <div class="deal-card c-cold"><div class="deal-header"><div><div class="deal-name">Willowbrook Plaza (Deutsch)</div><div><span class="deal-status ds-cold">No Outreach — Weeks</span></div></div><div class="deal-value">$2.1M</div></div><div class="deal-action">Esther Deutsch has never been contacted. Call Monday or remove from active pipeline.</div></div>
-  <div class="deal-card c-cold"><div class="deal-header"><div><div class="deal-name">Wentzville Site</div><div><span class="deal-status ds-cold">BJC Offer Pending</span></div></div><div class="deal-value">$3–4M</div></div><div class="deal-action">BJC offer pending, no recent email activity. Check with Ben on status this weekend.</div></div>
-  <div class="deal-card c-cold"><div class="deal-header"><div><div class="deal-name">7530 Maryland (Schneider)</div><div><span class="deal-status ds-cold">Stalled 10+ Days</span></div></div><div class="deal-value">$1.15M</div></div><div class="deal-action">Call Schneider Monday or find the next buyer.</div></div>
-  <div class="deal-card c-cold"><div class="deal-header"><div><div class="deal-name">Gutermuth Assemblage</div><div><span class="deal-status ds-cold">Offer $5.50PSD y confirmed.</div>
-  </div>
-
+  <h3>Strategic Nudge — May 6, 2026</h3>
+  <p><strong>The Esther G. call at 1 PM is the single most important hour of your week.</strong> Two principals executed CAs on Willowbrook this week. Caleb set up the meeting. The market is telling you this property sells — and Esther needs to hear that from you, backed by data. Know your listing price (backed by comps), your marketing angle, and what Esther needs to hear to sign. Confidence sells listings. If you walk in sharp, you close.</p>
+  <p><strong>Watson Rd is a quiet win you earned yesterday.</strong> Old deal terminated, new PSA signed by 8 PM — a two-hour turnaround on a dead deal. Now protect it: confirm the DD timeline and EMD with the new buyer before the end of the day.</p>
+  <p><strong>Your 10:30 AM–noon window is your revenue window.</strong> That's 90 minutes between your site visit and Kitchen Conservatory. Adam Goldschmidt (7 days), Jason Morgan (9 days), Wildhorse PSA (5 days), Tanner Brawley (uncontacted principal), Christopher Kool (unread) — five calls, each with a direct path to income. Treat this window like a revenue appointment.</p>
+  <p><strong>ICSC is 12 days away.</strong> You have real stories: CVS Olivette with 11+ CAs, Tenholder at $9.21M, Harrisburg with an Ollie's development filing, and potentially Willowbrook if you close Esther today. Build your meeting list in the 3–5 PM window. Five to eight targets. Send the requests tonight.</p>
+  <p><strong>You're doing the right things.</strong> Legal team is in place on Harrisburg, Watson got rescued, CVS is gaining momentum, new prospects on the calendar. Now execute: close Esther, set the IGC deadline, call Jason Morgan, build the ICSC list. Don't let a full schedule become an excuse for letting deals drift.</p>
 </div>
 </div>
 
-<!-- ══════════════════════════════════════════ -->
-<!--  NUDGE TAB                                -->
-<!-- ══════════════════════════════════════════ -->
-<div id="nudge" class="tab-content">
-<div class="nudge-box">
-  <h3>Strategic Nudge — May 1</h3>
-  <p>
-    <strong>CVS Olivette is your best asset right now.</strong> 4 CAs in 3 hours on Day 1 is real demand - not luck. Call Zach Wright, Nat Bala, Nikolas Burmeister, and Christian Becker today while the listing is fresh. Same-day call doubles conversion odds.<br><br>
-    <strong>Woodlawn is knocking.</strong> Paul Fusz replied 5/1 - open and respond, send proposal. This is how Singles become Doubles.<br><br>
-    <strong>Three closings coming:</strong> Olive 6/4 - Lindbergh 6/10 - Broadway 6/26. Protect the pipeline today.
-  </p>
-</div>
-</div>
-
-<div class="footer">
-  Tenholder Plaza · Manor Real Estate · Updated May 1, 2026 PM<br>
-  <span style="color:#475569">Tap tabs to navigate · 1B Singles -> 2B Doubles -> 3B Triples -> HR Homeruns</span>
-</div>
+<div class="footer">The Cherry Group &middot; Manor Real Estate &middot; Updated Wed, May 6, 2026 &middot; St. Louis Metro CRE</div>
 
 <script>
 function showTab(id, el) {
@@ -886,4 +633,7 @@ function showTab(id, el) {
   document.getElementById(id).classList.add('active');
   el.classList.add('active');
 }
+window.onload = function() {};
 </script>
+</body>
+</html>
